@@ -57,18 +57,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -86,9 +86,9 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
-            this.listView1.Location = new System.Drawing.Point(12, 32);
+            this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 248);
+            this.listView1.Size = new System.Drawing.Size(776, 268);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -165,7 +165,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(297, 286);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(491, 210);
+            this.groupBox1.Size = new System.Drawing.Size(499, 210);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Добавить запись";
@@ -328,47 +328,68 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Location = new System.Drawing.Point(12, 286);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(279, 210);
+            this.groupBox2.Size = new System.Drawing.Size(285, 210);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Поиск";
             // 
-            // button2
+            // checkBox2
             // 
-            this.button2.Location = new System.Drawing.Point(6, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(273, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Показать всё";
-            this.button2.UseVisualStyleBackColor = true;
+            this.checkBox2.Location = new System.Drawing.Point(147, 121);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(110, 58);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "Всегда учитывать ФИО";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // button3
+            // label11
             // 
-            this.button3.Location = new System.Drawing.Point(142, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Просроченные";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 115);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 17);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Отчество";
             // 
-            // button4
+            // label10
             // 
-            this.button4.Location = new System.Drawing.Point(40, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(187, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "> полугода с атестации";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(139, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Имя";
             // 
-            // button5
+            // label9
             // 
-            this.button5.Location = new System.Drawing.Point(6, 47);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Перевыпуск";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 17);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Фамилия";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(6, 132);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(135, 22);
+            this.textBox6.TabIndex = 7;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(141, 90);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(132, 22);
+            this.textBox5.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(9, 90);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(131, 22);
+            this.textBox4.TabIndex = 5;
             // 
             // button6
             // 
@@ -380,64 +401,45 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox4
+            // button5
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 93);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 22);
-            this.textBox4.TabIndex = 5;
+            this.button5.Location = new System.Drawing.Point(6, 47);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(131, 23);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Перевыпуск";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // textBox5
+            // button4
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 93);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 22);
-            this.textBox5.TabIndex = 6;
+            this.button4.Location = new System.Drawing.Point(40, 18);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(187, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "> полугода с атестации";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox6
+            // button3
             // 
-            this.textBox6.Location = new System.Drawing.Point(6, 132);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(135, 22);
-            this.textBox6.TabIndex = 7;
+            this.button3.Location = new System.Drawing.Point(142, 47);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(131, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Просроченные";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label9
+            // button2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 73);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Фамилия";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(139, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Имя";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 115);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 17);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Отчество";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Location = new System.Drawing.Point(150, 115);
-            this.checkBox2.MaximumSize = new System.Drawing.Size(135, 0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(110, 64);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "Всегда учитывать ФИО";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.button2.Location = new System.Drawing.Point(6, 184);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(273, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Показать всё";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

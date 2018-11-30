@@ -18,6 +18,7 @@ namespace lab5
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show(checkBox2.Size.ToString() + checkBox2.Location.X + checkBox2.Location.Y);
             //var i = new ListViewItem();
             //i.Text = "Фамилия Имя Отчество";
             //var a = new ListViewItem.ListViewSubItem();
@@ -96,12 +97,24 @@ namespace lab5
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            var a = new List<Pass>(passes);
+            if (alwaysFindWithFIO)
+            {
+                a = FindByFIO(a, textBox4.Text, textBox5.Text, textBox6.Text);
+            }
+            for (int i = 0; i < a.Count; i++) 
+            {
+                if (a[i].timeAfterLastTest() < new TimeSpan(183, 0, 0, 0))
+                {
+                    a.RemoveAt(i--);
+                }
+            }
+            drawList(a);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            drawList(FindByFIO(passes, textBox5.Text, textBox4.Text, textBox6.Text));
+            drawList(FindByFIO(passes, textBox4.Text, textBox5.Text, textBox6.Text));
         }
         List<Pass> FindByFIO(List<Pass> s, string LastName, string Name, string MiddleName)
         {
@@ -139,6 +152,33 @@ namespace lab5
                 }
             }
             return res;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var a = new List<Pass>(passes);
+            if (alwaysFindWithFIO)
+                a = FindByFIO(a, textBox4.Text, textBox5.Text, textBox6.Text);
+            for (int i = 0; i < a.Count; i++)
+                if (!a[i].needReIssue())
+                    a.RemoveAt(i);
+            drawList(a);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var a = new List<Pass>(passes);
+            if (alwaysFindWithFIO)
+                a = FindByFIO(a, textBox4.Text, textBox5.Text, textBox6.Text);
+            for (int i = 0; i < a.Count; i++)
+                if (a[i].isValid())
+                    a.RemoveAt(i);
+            drawList(a);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            drawList(passes);
         }
     }
 
